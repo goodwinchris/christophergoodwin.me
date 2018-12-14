@@ -1,0 +1,18 @@
+.l-wrap {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  animation-duration: 3s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+
+  @media (max-width: 799px) {
+    padding: 10px;
+  }
+
+  @media (min-width: 800px) {
+    padding: 20px;
+  }
+}

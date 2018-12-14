@@ -1,0 +1,77 @@
+.l-home { /* BG added in `theme.scss` */
+  padding: 40px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.home__heading  {
+  padding-bottom: 2em;
+  opacity: 0;
+  animation-duration: .75s;
+  animation-delay: 1.5s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.home__page {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  align-self: center;
+  opacity: 0;
+  animation-duration: .75s;
+  animation-delay: .75s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+
+  @media (max-width: 799px) {
+    max-width: 350px;
+  }
+
+  @media (min-width: 800px) {
+    max-width: 520px;
+  }
+}
+
+/* Removed as it is currently un-needed
+.home__page__links {
+  margin-top: 1em;
+  opacity: 0;
+  animation-name: fadeAndSlideIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.home__page__links__item {
+  display: inline-block;
+  letter-spacing: .0008em;
+  &:not(:last-of-type)::after {
+    content: "and";
+  }
+  @media (max-width: 799px) {
+    font-size: 1em;
+  }
+  @media (min-width: 800px) {
+    font-size: 1.5em;
+  }
+}
+*/
+
+.home__footer  {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation-duration: .75s;
+  animation-delay: 2.25s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+
+  @media (max-width: 799px), (max-height: 499px) {
+    padding-top: 4em;
+  }
+}
