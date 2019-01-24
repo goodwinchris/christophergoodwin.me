@@ -1,64 +1,43 @@
+@mixin theme($preference, $number) {
+  $prefix: $preference + '-theme-' + $number + '-';
+
+  color: map-get($themes, $prefix + 'text');
+    
+  &.l-body {
+    background-color: map-get($themes, $prefix + 'gutter');
+  }
+  
+  .l-home {
+    background-color: map-get($themes, $prefix + 'background');
+  }
+  
+  .t-link {
+    color: map-get($themes, $prefix + 'accent');
+  }
+}
+
 body {
-  &.theme-1 {
-    color: $theme-1-text;
-
-    &.l-body {
-      background-color: $theme-1-gutter;
+  &.light-theme-1 {
+    @include theme(light, 1);
+    
+    @media (prefers-color-scheme: dark) {
+      @include theme(dark, 1);
     }
-
-    .l-home {
-      background-color: $theme-1-background;
-    }
-
-    .t-link {
-      color: $theme-1-accent;
-
-      &:hover,
-      &:focus {
-        color: darken($theme-1-accent, 20%);
-      }
+  }
+  
+  &.dark-theme-1 {
+    @include theme(dark, 1);
+    
+    @media (prefers-color-scheme: light) {
+      @include theme(light, 1);
     }
   }
 
-  &.theme-2 {
-    color: $theme-2-text;
-
-    &.l-body {
-      background-color: $theme-2-gutter;
-    }
-
-    .l-home {
-      background-color: $theme-2-background;
-    }
-
-    .t-link {
-      color: $theme-2-accent;
-
-      &:hover,
-      &:focus {
-        color: lighten($theme-2-accent, 20%);
-      }
-    }
-  }
-
-  &.theme-3 {
-    color: $theme-3-text;
-
-    &.l-body {
-      background-color: $theme-3-gutter;
-    }
-
-    .l-home {
-      background-color: $theme-3-background;
-    }
-
-    .t-link {
-      color: $theme-3-accent;
-
-      &:hover,
-      &:focus {
-        color: lighten($theme-3-accent, 20%);
-      }
+  &.dark-theme-2 {
+    @include theme(dark, 2);
+    
+    @media (prefers-color-scheme: light) {
+      @include theme(light, 1);
     }
   }
 }

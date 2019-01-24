@@ -10,17 +10,6 @@
 
       gtag('config', 'UA-82639636-1');
     </script>
-    <script>
-      function theme() {
-        var items = ["theme-1", "theme-2", "theme-3"];
-        var random = items[Math.floor(Math.random()*items.length)];
-        document.body.classList.add(random);
-      }
-
-      document.addEventListener("DOMContentLoaded", function() {
-        theme();
-      });
-    </script>
     <meta charset="utf-8">
     <title>Christopher Goodwin | GoodwinC.com</title>
     <meta name="description" content="HTML and CSS Done Right, Building an Internet that works for everyone">
@@ -30,7 +19,7 @@
     <link rel="stylesheet" href="stylesheets/app.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   </head>
-  <body class="l-body">
+  <body class="l-body theme-1">
     <div class="l-wrap">
       <div class="l-home">
         <h1 class="home__heading t-heading">Christopher Goodwin</h1>
@@ -46,4 +35,16 @@
       </div>
     </div>
   </body>
+  <script>
+    function theme() {
+      var items = ["light-theme-1", "dark-theme-1", "dark-theme-2"];
+      var random = items[Math.floor(Math.random()*items.length)];
+      document.body.classList.remove("theme-1");
+      document.body.classList.add(random);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      theme();
+    });
+  </script>
 </html>
