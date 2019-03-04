@@ -1,0 +1,91 @@
+.l-wrap {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: auto;
+
+  animation-duration: 3s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+
+  @media (max-width: 799px) {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  @media (min-width: 800px) {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  .light-theme-1 & {
+    @include theme(light, 1);
+    
+    @media (prefers-color-scheme: dark) {
+      @include theme(dark, 1);
+    }
+  }
+  
+  .dark-theme-1 & {
+    @include theme(dark, 1);
+    
+    @media (prefers-color-scheme: light) {
+      @include theme(light, 1);
+    }
+  }
+
+  .dark-theme-2 & {
+    @include theme(dark, 2);
+    
+    @media (prefers-color-scheme: light) {
+      @include theme(light, 1);
+    }
+  }
+}
+
+.wrap__heading {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  animation-duration: .75s;
+  animation-delay: 1.5s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  
+  @media (max-width: 799px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: 800px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+
+.wrap__footer  {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation-duration: .75s;
+  animation-delay: 2.25s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+
+  @media (max-width: 799px){
+    margin-top: 10px;
+  }
+
+  @media (min-width: 800px) {
+    margin-top: 20px;
+  }
+}

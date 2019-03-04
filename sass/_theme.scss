@@ -1,43 +1,39 @@
+$themes: (
+  light-theme-1-wrap-text: #423b36,
+  light-theme-1-text: #423b36,
+  light-theme-1-accent: #ea4f4f,
+  light-theme-1-background: #f3efe7,
+  light-theme-1-gutter: #fff,
+  
+  dark-theme-1-wrap-text: #323d4a,
+  dark-theme-1-text: #e7edf5,
+  dark-theme-1-accent: #4feae3,
+  dark-theme-1-background: #323d4a,
+  dark-theme-1-gutter: #e7edf5,
+  
+  dark-theme-2-wrap-text: #43324a,
+  dark-theme-2-text: #f3ebf7,
+  dark-theme-2-accent: #ec4b62,
+  dark-theme-2-background: #43324a,
+  dark-theme-2-gutter: #f3ebf7
+);
+
 @mixin theme($preference, $number) {
   $prefix: $preference + '-theme-' + $number + '-';
+  
+  background-color: map-get($themes, $prefix + 'gutter');
+  color: map-get($themes, $prefix + 'wrap-text');
 
-  color: map-get($themes, $prefix + 'text');
-    
-  &.l-body {
+  .wrap__heading {
     background-color: map-get($themes, $prefix + 'gutter');
   }
-  
+
   .l-home {
     background-color: map-get($themes, $prefix + 'background');
+    color: map-get($themes, $prefix + 'text');
   }
   
   .t-link {
     color: map-get($themes, $prefix + 'accent');
-  }
-}
-
-body {
-  &.light-theme-1 {
-    @include theme(light, 1);
-    
-    @media (prefers-color-scheme: dark) {
-      @include theme(dark, 1);
-    }
-  }
-  
-  &.dark-theme-1 {
-    @include theme(dark, 1);
-    
-    @media (prefers-color-scheme: light) {
-      @include theme(light, 1);
-    }
-  }
-
-  &.dark-theme-2 {
-    @include theme(dark, 2);
-    
-    @media (prefers-color-scheme: light) {
-      @include theme(light, 1);
-    }
   }
 }
