@@ -13,6 +13,33 @@
   
   .t-link {
     color: map-get($themes, $prefix + 'accent');
+    position: relative;
+    
+    &::before {
+      content: "";
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      z-index: -1;
+      background-color: transparent;
+      border-radius: 2px;
+      transition: .2s ease background-color;
+    }
+
+    &:hover {
+      color: map-get($themes, $prefix + 'accent-hover');
+    }
+
+    &:focus {
+      color: map-get($themes, $prefix + 'accent-focus-color');
+      outline: none;
+
+      &::before {
+        background-color: map-get($themes, $prefix + 'accent-focus-background');
+      }
+    }
   }
 }
 
