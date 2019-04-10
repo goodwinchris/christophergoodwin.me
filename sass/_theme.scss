@@ -7,14 +7,14 @@
     background-color: map-get($themes, $prefix + 'gutter');
   }
   
-  .l-home {
+  .l-main {
     background-color: map-get($themes, $prefix + 'background');
   }
   
   .t-link {
     color: map-get($themes, $prefix + 'accent');
     position: relative;
-    
+
     &::before {
       content: "";
       width: calc(100% + 4px);

@@ -3,7 +3,7 @@
   font-weight: $weight-bold;
 
   + .t-body {
-    margin-top: .5em;
+    margin-top: 1em;
   }
 
   @media (max-width: 799px) {
@@ -27,6 +27,7 @@
 }
 
 .t-body {
+  display: block;
   letter-spacing: .0008em;
   line-height: 1.5em;
 
@@ -55,7 +56,7 @@
   transition: .2s ease color;
 
   .t-body & {
-    font-weight: $weight-medium;
+    font-weight: $weight-bold;
   }
 }
 
