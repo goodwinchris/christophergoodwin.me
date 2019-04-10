@@ -19,28 +19,33 @@
     <link rel="stylesheet" href="stylesheets/app.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   </head>
-  <body class="l-body theme-1">
+  <body class="l-body light-theme-1">
     <div class="l-wrap">
-      <div class="l-home">
-        <h1 class="home__heading t-heading">Christopher Goodwin</h1>
-        <section class="home__page">
+      <main class="l-main">
+        <h1 class="main__heading t-heading">Christopher Goodwin</h1>
+        <section class="main__page">
           <h2 class="t-display">HTML &amp; CSS Done Right</h2>
           <!--<h3 class="t-sub-display">Experienced U.X. Development</h3>-->
-          <p class="t-body">I write <span class="t-body--medium">semantic HTML &amp; CSS</span> with emphasis on <span class="t-body--medium">reusable components</span>, <span class="t-body--medium">smart class naming</span>, and <span class="t-body--medium">accessibility</span>.</p>
-          <p class="t-body">I currently work for <a class="t-link" href="https://dockyard.com">DockYard</a> as a User Experience Developer. You can also find me on <a class="t-link" href="https://twitter.com/itsallgoodie">Twitter</a> and <a class="t-link" href="https://instagram.com/itsallgoodie">Instagram</a>.</p>
+          <p class="t-body">I'm a User Experience Developer at <a class="t-link" href="https://dockyard.com">DockYard</a> where I write <span class="t-body--bold">semantic HTML &amp; CSS</span> with an emphasis on <span class="t-body--bold">accessibility</span>, <span class="t-body--bold">reusable components</span>, and <span class="t-body--bold">smart class naming</span>.</p>
+          <p class="t-body">You can find me on <a class="t-link" href="https://twitter.com/itsallgoodie">Twitter</a> and <a class="t-link" href="https://instagram.com/itsallgoodie">Instagram</a> or read some of my recent blog posts about <a class="t-link" href="https://dockyard.com/blog/2019/02/14/introducing-hover-hover">mobile hover states</a>, <a class="t-link" href="https://dockyard.com/blog/2018/06/27/customizing-slack-to-work-for-you">customizing slack</a>, and <a class="t-link" href="https://dockyard.com/blog/2017/12/20/first-child-last-child-nth-child-and-not-nth-child">:nth selectors</a>.</p>
         </section>
-        <footer class="home__footer">
+        <footer class="main__footer">
           <p class="t-footer">Based in Boston, Ma</p>
         </footer>
-      </div>
+      </main>
     </div>
   </body>
   <script>
     function theme() {
-      var items = ["light-theme-1", "dark-theme-1", "dark-theme-2"];
-      var random = items[Math.floor(Math.random()*items.length)];
-      document.body.classList.remove("theme-1");
-      document.body.classList.add(random);
+      var hour = new Date().getHours()
+      var isDayTime = hour > 6 && hour < 20
+      document.body.classList.remove("light-theme-1");
+      if(isDayTime) {
+        document.body.classList.add("light-theme-1");
+      }
+      else {
+        document.body.classList.add("dark-theme-2");
+      }
     }
 
     document.addEventListener("DOMContentLoaded", function() {
