@@ -1,0 +1,10 @@
+body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--cherry);
+  font-family: Edmondsans;
+  font-size: 1rem;
+}

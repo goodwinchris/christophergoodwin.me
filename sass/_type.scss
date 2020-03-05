@@ -1,70 +1,79 @@
+.t-heading {
+  font-size: var(--font-size-48);
+  color: var(--cherry);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.25em;
+
+  &:first-letter {
+    margin-left: -.075em;
+  }
+}
+
+.t-heading-small {
+  font-size: var(--font-size-24);
+  color: var(--cherry);
+  font-weight: 900;
+  letter-spacing: -0.0125em;
+  line-height: 1.25em;
+}
+
+.t-heading-extra-small {
+  font-size: var(--font-size-18);
+  color: var(--cherry);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.25em;
+}
+
 .t-display {
-  letter-spacing: -.005em;
-  font-weight: $weight-bold;
-
-  + .t-body {
-    margin-top: 1em;
+  font-size: var(--font-size-192);
+  color: var(--cherry);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+    
+  &:first-letter {
+    margin-left: -.075em;
   }
-
-  @media (max-width: 799px) {
-    font-size: 1.5em;
-  }
-
-  @media (min-width: 800px) {
-    font-size: 3em;
-  }
-}
-
-.t-heading,
-.t-footer {
-  font-size: 1.25em;
-  letter-spacing: -.005em;
-  line-height: 1.5em;
-  font-weight: $weight-bold;
-}
-.t-footer {
-  opacity: .25;
 }
 
 .t-body {
-  display: block;
-  letter-spacing: .0008em;
+  font-size: var(--font-size-18);
+  color: var(--cherry);
+  font-weight: 300;
   line-height: 1.5em;
 
   + .t-body {
-    margin-top: .75em;
-  }
-
-  @media (min-width: 799px) {
-    font-size: .875em;
-  }
-
-  @media (min-width: 800px) {
-    font-size: 1em;
-  }
-}
-.t-body--medium {
-  font-weight: $weight-medium;
-}
-.t-body--bold {
-  font-weight: $weight-bold;
-}
-
-.t-link { /* Color added in `theme.scss` */
-  font-weight: $weight-bold;
-  letter-spacing: -.005em;
-  transition: .2s ease color;
-
-  .t-body & {
-    font-weight: $weight-bold;
+    margin-top: 1rem;
   }
 }
 
-.t-hidden {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
+.t-link {
+  font-weight: 900;
+  color: var(--cherry);
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: .2s ease-in-out all;
+
+  &::after {
+    content: "";
+    width: calc(100% + .2em);    
+    height: .115em;
+    background: var(--cherry);
+    position: absolute;
+    bottom: 0;
+    left: -.1em;
+    z-index: -1;
+    transition: .2s ease-in-out all;
+    border-radius: 2px;
+  }
+  
+  &:hover {
+    color: var(--cream);
+    
+    &::after {
+      height: 125%;
+    }
+  }
 }

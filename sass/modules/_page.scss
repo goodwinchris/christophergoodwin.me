@@ -1,0 +1,87 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: var(--cream);
+  flex: 1;
+}
+
+.page__heading {
+  padding: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  word-spacing: 100vw;
+}
+
+.page__main {
+  @media (min-width: 800px) {
+    padding: 192px 192px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page__main__introduction,
+.page__main__blog {
+  max-width: 496px;
+}
+
+.page__main__introduction {
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.page__main__blog {
+  margin-left: 96px;
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.blog__heading {
+  margin-bottom: 1.5rem;
+}
+
+.blog__post {
+  display: block;
+  text-decoration: none;
+  
+  + .blog__post {
+    margin-top: 2rem;
+  }
+}
+
+/* TODO: Fix BEM naming in this file */
+
+.blog__post__heading {
+  margin-bottom: .5rem;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  word-wrap: break-word;
+  transition: .2s ease-in-out all;
+
+  &::after {
+    content: "";
+    width: calc(100% + 4px);    
+    height: .115em;
+    background: var(--cherry);
+    position: absolute;
+    bottom: 3px;
+    left: -2px;
+    z-index: -1;
+    transition: .2s ease-in-out all;
+    border-radius: 2px;
+  }
+  
+  .blog__post:hover & {
+    color: var(--cream);
+    
+    &::after {
+      height: 100%;
+    }
+  }
+}
