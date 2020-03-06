@@ -2,11 +2,36 @@
   --cherry: #7D464D;
   --cream: #FAEEF1;
 
-  --font-size-16: 1rem;
-  --font-size-18: 1.125rem;
-  --font-size-24: 1.5rem;
-  --font-size-48: 3rem;
-  --font-size-192: 12rem;
+  @media (max-width: 399px) {
+    --font-size-192: 4.5rem;
+  }
 
-  --font-base: "edmondsans", sans-serif;
+  @media (min-width: 400px) and (max-width: 599px) {
+    --font-size-192: 6rem;
+  }
+
+  @media (max-width: 599px) {
+    --font-size-16: .75rem;
+    --font-size-18: .875rem;
+    --font-size-24: 1rem;
+    --font-size-48: 1.5rem;
+  }
+
+  @media (min-width: 600px) and (max-width: 799px) {
+    --font-size-16: .875rem;
+    --font-size-18: 1rem;
+    --font-size-24: 1.125rem;
+    --font-size-48: 2.25rem;
+    --font-size-192: 9rem;
+  }
+
+  @media (min-width: 800px) {
+    --font-size-16: 1rem;
+    --font-size-18: 1.125rem;
+    --font-size-24: 1.5rem;
+    --font-size-48: 3rem;
+    --font-size-192: 12rem;
+  }
+
+  --font-family: "edmondsans", sans-serif;
 }
