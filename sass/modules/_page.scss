@@ -33,21 +33,13 @@
   grid-area: main;
   display: grid;
   align-items: center;
-  
-  @media (max-width: 399px) {
+
+  @media (max-width: 1023px) {
     grid-template-areas: ". intro ."
                          ". .     ."
                          ". blog  .";
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: auto 48px auto;
-  }
-
-  @media (min-width: 400px) and (max-width: 1023px) {
-    grid-template-areas: ". intro ."
-                         ". .     ."
-                         ". blog  .";
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto 96px auto;
   }
 
   @media (min-width: 1024px) {

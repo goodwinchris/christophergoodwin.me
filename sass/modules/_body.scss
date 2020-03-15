@@ -6,4 +6,8 @@ body {
   background: linear-gradient(45deg, var(--plum), var(--cherry));
   font-family: var(--font-family);
   font-size: 1rem;
+  animation-duration: 3s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
