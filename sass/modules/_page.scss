@@ -1,5 +1,5 @@
 .page {
-  background: linear-gradient(45deg, var(--plum), var(--cherry));
+  background: linear-gradient(to top right, var(--background-one), var(--background-two));
   position: relative;
   flex: 1;
   display: grid;
@@ -143,7 +143,7 @@
     content: "";
     width: calc(100% + 4px);    
     height: .115em;
-    background: var(--cream);
+    background: var(--foreground-one);
     position: absolute;
     bottom: 3px;
     left: -2px;
@@ -154,7 +154,7 @@
   
   .blog__post:hover &,
   .blog__post:focus & {
-    color: var(--cherry);
+    color: var(--background-one);
     
     &::after {
       height: 100%;
