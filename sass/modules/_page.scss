@@ -1,5 +1,6 @@
 .page {
   position: relative;
+  flex: 1;
   display: grid;
   grid-template-areas: "header header"
                        "main   main"
@@ -53,29 +54,6 @@
     grid-template-areas: ". intro . blog .";
     grid-template-columns: 1fr auto 1fr auto 1fr;
   }
-
-  // @media (max-width: 599px) {
-  //   padding-right: 48px;
-  //   padding-left: 48px;
-  // }
-
-  // @media (min-width: 600px) and (max-width: 799px) {
-  //   padding-right: 96px;
-  //   padding-left: 96px;
-  // }
-  
-  // @media (min-width: 800px) and (max-width: 1487px) {
-  //   padding-right: 192px;
-  //   padding-left: 192px;
-  // }
-
-  // @media (max-width: 1487px) {
-  //   flex-direction: column;
-  // }
-
-  // @media (min-width: 1488px) {
-  //   padding: 96px 192px;
-  // }
 }
 
 .page__main__introduction,
@@ -160,7 +138,7 @@
 /* TODO: Fix BEM naming in this file */
 
 .blog__post__heading {
-  margin-bottom: .5rem;
+  margin-bottom: .125rem;
   display: inline-block;
   position: relative;
   z-index: 1;
