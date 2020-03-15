@@ -25,7 +25,7 @@
         <div class="page__main__introduction">
           <p class="t-body">
             <span class="t-display">Hello!</span>
-            <span class="t-display">I’m Chris</span>
+            <span class="t-display">I’m Chris,</span>
             a web developer, photography enthusiast, and Seattle Sounders fan living in Chicago. I work for <a class="t-link" target="_blank" href="https://dockyard.com">DockYard</a>, from my home, as a Senior User Experience Developer.
           </p>
           <p class="t-body">I focus on writing sematic code, building reusable components, and releasable code to build websites that are responsive, accessible, and work for everyone. After all, every great website needs a great foundation.</p>
@@ -62,21 +62,4 @@
       </main>
     </div>
   </body>
-  <script>
-    function theme() {
-      var hour = new Date().getHours()
-      var isDayTime = hour > 6 && hour < 20
-      document.body.classList.remove("light-theme-1");
-      if(isDayTime) {
-        document.body.classList.add("light-theme-1");
-      }
-      else {
-        document.body.classList.add("dark-theme-2");
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-      theme();
-    });
-  </script>
 </html>
