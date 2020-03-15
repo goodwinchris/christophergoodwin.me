@@ -1,36 +1,21 @@
 :root {
-  --cherry: #7D464D;
+  --plum: #542C36;
+  --cherry: #46252E;
   --cream: #FAEEF1;
 
-  @media (max-width: 399px) {
-    --font-size-192: 4.5rem;
-  }
+  --red: red;
+  --blue: blue;
 
-  @media (min-width: 400px) and (max-width: 599px) {
-    --font-size-192: 6rem;
-  }
+  --type-scale: 1;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-24: calc(1.5rem * var(--type-scale));
+  --font-size-48: calc(3rem * var(--type-scale));
+  --font-size-96: calc(6rem * var(--type-scale));
+  --font-size-192: calc(12rem * var(--type-scale));
 
   @media (max-width: 599px) {
-    --font-size-16: .75rem;
-    --font-size-18: .875rem;
-    --font-size-24: 1rem;
-    --font-size-48: 1.5rem;
-  }
-
-  @media (min-width: 600px) and (max-width: 799px) {
-    --font-size-16: .875rem;
-    --font-size-18: 1rem;
-    --font-size-24: 1.125rem;
-    --font-size-48: 2.25rem;
-    --font-size-192: 9rem;
-  }
-
-  @media (min-width: 800px) {
-    --font-size-16: 1rem;
-    --font-size-18: 1.125rem;
-    --font-size-24: 1.5rem;
-    --font-size-48: 3rem;
-    --font-size-192: 12rem;
+    --type-scale: .75;
   }
 
   --font-family: "edmondsans", sans-serif;
