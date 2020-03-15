@@ -76,16 +76,22 @@
 
 .page__main__introduction__social {
   display: grid;
+
+  @media (max-width: 449px) {
+    grid-template-columns: min-content min-content;
+  }
+  
+  @media (min-width: 450px) {
+    grid-template-columns: min-content min-content min-content min-content;
+  }
   
   @media (max-width: 799px) {
     margin-top: .5rem;
     margin-left: -.5rem;
-    grid-template-columns: min-content min-content;
   }
   
   @media (min-width: 800px) {
     padding: 48px;
-    grid-template-columns: min-content min-content min-content min-content;
     position: absolute;
     top: 0;
     right: 0;
