@@ -3,6 +3,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   box-sizing: border-box;
+  background-color: var(--body-background);
   font-family: var(--font-family);
   font-size: 1rem;
   animation-duration: 3s;
