@@ -1,7 +1,13 @@
 :root {
-  --plum: #542C36;
-  --cherry: #46252E;
-  --cream: #FAEEF1;
+  --background-one: #542c36;
+  --background-two: #46252e;
+  --foreground-one: #faeef1;
+
+  @media (prefers-color-scheme: light) {
+    --background-one: #faeef1;
+    --background-two: #d4c2c6;
+    --foreground-one: #633541;
+  }
 
   --red: red;
   --blue: blue;
