@@ -5,11 +5,8 @@
                        "main   main"
                        "footer footer";
 
-  @media (max-width: 399px) {
-    grid-template-rows:8.75rem 1fr 24px;
-  }
-
-  @media (min-width: 400px) and (max-width: 1023px) {
+  @media (max-width: 1023px) {
+    grid-template-rows:8.75rem 1fr 48px;
     grid-template-rows: 8.75rem 1fr 48px;
   }
 
