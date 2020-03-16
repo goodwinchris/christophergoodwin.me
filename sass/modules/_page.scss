@@ -1,12 +1,14 @@
 .page {
-  background: linear-gradient(to top right, var(--background-one), var(--background-two));
-  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1800px;
   flex: 1;
   display: grid;
   grid-template-areas: "header header"
                        "main   main"
                        "footer footer";
-
+  position: relative;
+  
   @media (max-width: 1023px) {
     grid-template-rows:8.75rem 1fr 48px;
     grid-template-rows: 8.75rem 1fr 48px;
