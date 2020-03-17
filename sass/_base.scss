@@ -29,9 +29,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-body {
+html {
   background-color: var(--body-background);
+}
+body {
   font-family: var(--font-base);
+  color: var(--foreground-one);
   line-height: 1;
 }
 ol, ul {

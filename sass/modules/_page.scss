@@ -2,6 +2,7 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 1800px;
+  max-height: 1200px;
   flex: 1;
   display: grid;
   grid-template-areas: "header header"
@@ -10,6 +11,7 @@
   position: relative;
   
   @media (max-width: 1023px) {
+    align-self: flex-start;
     grid-template-rows:8.75rem 1fr 48px;
     grid-template-rows: 8.75rem 1fr 48px;
   }
@@ -120,52 +122,5 @@
   @media (min-width: 1024px) {
     padding-right: 48px;
     padding-left: 24px;
-  }
-}
-
-.blog__heading {
-  margin-bottom: .75rem;
-}
-
-.blog__post {
-  display: block;
-  text-decoration: none;
-  outline: 0;
-
-  + .blog__post {
-    margin-top: 1.5rem;
-  }
-}
-
-/* TODO: Fix BEM naming in this file */
-
-.blog__post__heading {
-  margin-bottom: .125rem;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  word-wrap: break-word;
-  transition: .2s ease-in-out all;
-
-  &::after {
-    content: "";
-    width: calc(100% + 4px);    
-    height: .115em;
-    background: var(--foreground-one);
-    position: absolute;
-    bottom: 3px;
-    left: -2px;
-    z-index: -1;
-    transition: .2s ease-in-out all;
-    border-radius: 2px;
-  }
-  
-  .blog__post:hover &,
-  .blog__post:focus & {
-    color: var(--background-one);
-    
-    &::after {
-      height: 100%;
-    }
   }
 }
