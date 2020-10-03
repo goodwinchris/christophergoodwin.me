@@ -5,10 +5,13 @@ body {
   background: linear-gradient(to top right, var(--background-one), var(--background-two));
   font-family: var(--font-family);
   font-size: 1rem;
-  opacity: 0;
-  animation-delay: .5s;
-  animation-duration: 3s;
-  animation-name: fadeIn;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    opacity: 0;
+    animation-delay: .5s;
+    animation-duration: 3s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
 }
