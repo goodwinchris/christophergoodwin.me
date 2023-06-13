@@ -3,7 +3,6 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   background: linear-gradient(to top right, var(--background-one), var(--background-two));
-  font-family: var(--font-family);
   font-size: 1rem;
   
   @media (prefers-reduced-motion: no-preference) {

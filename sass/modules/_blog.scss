@@ -8,7 +8,7 @@
   outline: 0;
 
   + .blog__post {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -19,52 +19,63 @@
   position: relative;
   z-index: 1;
   word-wrap: break-word;
+  text-decoration: underline;
+  text-decoration-thickness: .1em;
+  text-decoration-style: dotted;
 
   @media (prefers-reduced-motion: no-preference) {
     transition: .2s ease-in-out color;
   }
 
-  &::before {
-    content: "";
-    width: calc(100% + 4px);    
-    height: .15em;
-    background: var(--foreground-one);
-    position: absolute;
-    bottom: 3px;
-    left: -2px;
-    z-index: -1;
-    border-radius: 4px;
+  // &::before {
+  //   content: "";
+  //   width: calc(100% + 4px);    
+  //   height: .15em;
+  //   background: var(--foreground-one);
+  //   position: absolute;
+  //   bottom: 3px;
+  //   left: -2px;
+  //   z-index: -1;
+  //   border-radius: 4px;
 
-    @media (prefers-reduced-motion: no-preference) {
-      @media (hover: hover) {
-        transition: .2s ease-in-out height;
-      }
-    }
-  }
+  //   @media (prefers-reduced-motion: no-preference) {
+  //     @media (hover: hover) {
+  //       transition: .2s ease-in-out height;
+  //     }
+  //   }
+  // }
 
-  &::after {
-    content: "";
-    width: calc(100% + 8px);    
-    height: 0;
-    background: transparent;
-    position: absolute;
-    bottom: 1px;
-    left: -4px;
-    z-index: -2;
-    border-radius: 6px;
-    box-shadow: 0 0 0 0 transarent;
-  }
+  // &::after {
+  //   content: "";
+  //   width: calc(100% + 8px);    
+  //   height: 0;
+  //   background: transparent;
+  //   position: absolute;
+  //   bottom: 1px;
+  //   left: -4px;
+  //   z-index: -2;
+  //   border-radius: 6px;
+  //   box-shadow: 0 0 0 0 transarent;
+  // }
 
   .blog__post:hover & {
-    color: var(--background-one);
+    // color: var(--background-one);
     
-    &::before {
-      height: 100%;
-    }
+    // &::before {
+    //   height: 100%;
+    // }
   }
 
-  .blog__post:focus & {
+  .blog__post:focus-visible & {
     &::after {
+      content: "";
+      width: calc(100% + 8px);    
+      background: transparent;
+      position: absolute;
+      bottom: 1px;
+      left: -4px;
+      z-index: -2;
+      border-radius: 6px;
       height: calc(100% + 4px);
       box-shadow: 0 0 0 .15em var(--foreground-one);
     }

@@ -33,9 +33,12 @@ html {
   background-color: var(--body-background);
 }
 body {
-  font-family: var(--font-base);
+  font-family: var(--font-family-body);
   color: var(--foreground-one);
   line-height: 1;
+}
+h1, h2, h4, h5, h6 {
+  font-family: var(--font-family-heading);
 }
 ol, ul {
   list-style: none;

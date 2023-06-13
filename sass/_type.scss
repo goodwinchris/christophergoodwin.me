@@ -4,17 +4,13 @@
   font-weight: 900;
   letter-spacing: -0.025em;
   line-height: 1.25em;
-
-  &:first-letter {
-    margin-left: -.075em;
-  }
+  font-family: var(--font-family-heading);
 }
 
 .t-heading-small {
   font-size: var(--font-size-24);
   color: var(--foreground-one);
   font-weight: 900;
-  letter-spacing: -0.0125em;
   line-height: 1.25em;
 }
 
@@ -30,8 +26,9 @@
   font-size: var(--font-size-96);
   color: var(--foreground-one);
   font-weight: 900;
-  letter-spacing: -0.05em;
-  line-height: 1em;
+  letter-spacing: -0.02em;
+  line-height: .925em;
+  font-family: var(--font-family-heading);
 }
 
 .t-body {
@@ -41,7 +38,7 @@
   line-height: 1.5em;
 
   > .t-display {
-    margin-left: -.075em;
+    margin-left: -.03em;
     display: block;
   }
 
@@ -60,7 +57,9 @@
 .t-link {
   font-weight: 900;
   color: var(--foreground-one);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: .1em;
+  text-decoration-style: dotted;
   position: relative;
   z-index: 1;
 
@@ -70,48 +69,18 @@
     }
   }
 
-  &::before {
-    content: "";
-    width: calc(100% + .2em);    
-    height: .15em;
-    background: var(--foreground-one);
-    position: absolute;
-    bottom: 0;
-    left: -.1em;
-    z-index: -1;
-    border-radius: 2px;
-
-    @media (prefers-reduced-motion: no-preference) {
-      @media (hover: hover) {
-        transition: .2s ease-in-out height;
-      }
-    }
-  }
-
-  &::after {
-    content: "";
-    width: calc(100% + 8px);
-    height: 0;
-    background: transparent;
-    position: absolute;
-    bottom: -2px;
-    left: -4px;
-    z-index: -2;
-    border-radius: 4px;
-    box-shadow: 0 0 0 0 transarent;
-  }
-
-  &:hover {
-    color: var(--background-one);
-    
-    &::before {
-      height: 120%;
-    }
-  }
-  &:focus {
+  &:focus-visible {
     outline: 0; 
     
     &::after {
+      content: "";
+      width: calc(100% + 8px);
+      background: transparent;
+      position: absolute;
+      bottom: -2px;
+      left: -4px;
+      z-index: -2;
+      border-radius: 4px;
       height: calc(120% + 4px);
       box-shadow: 0 0 0 .15em var(--foreground-one);
     }
