@@ -1,8 +1,7 @@
 .t-heading {
   font-size: var(--font-size-48);
   color: var(--foreground-one);
-  font-weight: 900;
-  letter-spacing: -0.025em;
+  font-weight: 400;
   line-height: 1.25em;
   font-family: var(--font-family-heading);
 }
@@ -25,7 +24,7 @@
 .t-display {
   font-size: var(--font-size-96);
   color: var(--foreground-one);
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: -0.02em;
   line-height: .925em;
   font-family: var(--font-family-heading);
@@ -85,4 +84,14 @@
       box-shadow: 0 0 0 .15em var(--foreground-one);
     }
   }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
 }
