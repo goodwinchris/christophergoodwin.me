@@ -1,18 +1,13 @@
 :root {
   --body-background: #1c1c1e;
-  --background-one: #542c36;
-  --background-two: #46252e;
-  --foreground-one: rgb(250, 238, 241);
+  --background: #46252e;
+  --foreground-one: #faeef1;
 
   @media (prefers-color-scheme: light) {
     --body-background: #fff;
-    --background-one: #faeef1;
-    --background-two: #e0d0d4;
-    --foreground-one: #633541;
+    --background: #e0d0d4;
+    --foreground-one: #5b303b;
   }
-
-  --red: red;
-  --blue: blue;
 
   --type-scale: 1;
   --font-size-16: 1rem;

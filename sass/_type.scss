@@ -56,16 +56,31 @@
 .t-link {
   font-weight: 900;
   color: var(--foreground-one);
-  text-decoration: underline;
-  text-decoration-thickness: .1em;
-  text-decoration-style: dotted;
   position: relative;
   z-index: 1;
-
+  display: inline-block;
+  text-decoration: none;
+  
   @media (prefers-reduced-motion: no-preference) {
     @media (hover: hover) {
-      transition: .2s ease-in-out color;
+      span {
+        transition: .6s cubic-bezier(0,0,.25,1) text-underline-offset, 
+        .6s cubic-bezier(0,0,.25,1) transform;
+      }
     }
+  }
+  
+  span {
+    text-decoration: underline;
+    text-decoration-thickness: .1em;
+    text-decoration-style: dotted;
+    text-underline-offset: .166em;
+    display: inline-block;
+
+  }
+
+  span:hover {
+    text-underline-offset: .444rem;
   }
 
   &:focus-visible {
@@ -80,7 +95,7 @@
       left: -4px;
       z-index: -2;
       border-radius: 4px;
-      height: calc(120% + 4px);
+      height: calc(100% + 8px);
       box-shadow: 0 0 0 .15em var(--foreground-one);
     }
   }

@@ -2,7 +2,7 @@ body {
   display: flex;
   min-height: 100vh;
   box-sizing: border-box;
-  background: linear-gradient(to top right, var(--background-one), var(--background-two));
+  background-color: var(--background);
   font-size: 1rem;
   
   @media (prefers-reduced-motion: no-preference) {
