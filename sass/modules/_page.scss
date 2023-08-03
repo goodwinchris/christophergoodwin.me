@@ -30,17 +30,17 @@
   }
 }
 
-.page__main__introduction,
-.page__main__blog {
+.page__introduction,
+.page__blog {
   max-width: 432px;
   width: 100%;
   box-sizing: content-box;
 }
 
-.page__main__introduction {
+.page__introduction {
   grid-area: intro;
 }
 
-.page__main__blog {
+.page__blog {
   grid-area: blog;
 }
