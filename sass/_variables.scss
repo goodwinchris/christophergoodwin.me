@@ -1,12 +1,12 @@
 :root {
   --body-background: #1c1c1e;
   --background: #46252e;
-  --foreground-one: #faeef1;
+  --foreground: #faeef1;
 
   @media (prefers-color-scheme: light) {
     --body-background: #fff;
     --background: #e0d0d4;
-    --foreground-one: #5b303b;
+    --foreground: #5b303b;
   }
 
   --type-scale: 1;

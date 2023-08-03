@@ -1,5 +1,5 @@
 .blog__heading {
-  margin-bottom: .75rem;
+  margin-block-end: .75rem;
   display: inline-block;
   width: 100%;
 }
@@ -17,7 +17,7 @@
   }
 
   + .blog__post {
-    margin-top: 1rem;
+    margin-block-start: 1rem;
   }
 
   &:focus-visible::after {
@@ -25,18 +25,18 @@
     width: calc(100% + 8px);    
     background: transparent;
     position: absolute;
-    bottom: 1px;
-    left: -4px;
+    inset-block-end: 1px;
+    inset-inline-start: -4px;
     z-index: -2;
     border-radius: 6px;
     height: calc(100% + 4px);
-    box-shadow: 0 0 0 .15em var(--foreground-one);
+    box-shadow: 0 0 0 .15em var(--foreground);
   }
 }
 
 
 .blog__post__heading {
-  margin-bottom: .125rem;
+  margin-block-end: .125rem;
   display: inline-block;
   position: relative;
   z-index: 1;

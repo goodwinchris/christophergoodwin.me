@@ -1,11 +1,11 @@
 .introduction__heading {
-  margin-bottom: calc(1rem - 3px);
+  margin-block-end: calc(1rem - 3px);
 }
 
 .introduction__social {
   display: grid;
-  margin-top: .5rem;
-  margin-left: -.5rem;
+  margin-block-start: .5rem;
+  margin-inline-start: -.5rem;
   grid-template-columns: min-content min-content;
   
   @media (min-width: 450px) {
