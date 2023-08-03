@@ -1,32 +1,32 @@
 .t-heading {
   font-size: var(--font-size-48);
-  color: var(--foreground);
+  font-family: var(--font-family-heading);
   font-weight: 400;
   line-height: 1.25em;
-  font-family: var(--font-family-heading);
+  color: var(--foreground);
 }
 
 .t-heading-small {
   font-size: var(--font-size-24);
-  color: var(--foreground);
   font-weight: 900;
   line-height: 1.25em;
+  color: var(--foreground);
 }
 
 .t-display {
   font-size: var(--font-size-96);
-  color: var(--foreground);
+  font-family: var(--font-family-heading);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: .925em;
-  font-family: var(--font-family-heading);
+  color: var(--foreground);
 }
 
 .t-body {
   font-size: var(--font-size-18);
-  color: var(--foreground);
   font-weight: 300;
   line-height: 1.5em;
+  color: var(--foreground);
 
   > .t-display {
     margin-inline-start: -.03em;
@@ -40,18 +40,18 @@
 
 .t-list {
   font-size: var(--font-size-18);
-  color: var(--foreground);
   font-weight: 300;
   line-height: 1.5em;
+  color: var(--foreground);
 }
 
 .t-link {
   font-weight: 900;
-  color: var(--foreground);
+  display: inline-block;
   position: relative;
   z-index: 1;
-  display: inline-block;
   text-decoration: none;
+  color: var(--foreground);
   
   @media (prefers-reduced-motion: no-preference) {
     @media (hover: hover) {
@@ -81,24 +81,24 @@
     &::after {
       content: "";
       width: calc(100% + 8px);
-      background: transparent;
+      height: calc(100% + 8px);
       position: absolute;
       inset-block-end: -2px;
       inset-inline-start: -4px;
       z-index: -2;
-      border-radius: 4px;
-      height: calc(100% + 8px);
+      background: transparent;
       box-shadow: 0 0 0 .15em var(--foreground);
+      border-radius: 4px;
     }
   }
 }
 
 .visually-hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap; 
   clip: rect(0 0 0 0); 
   clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap; 
-  width: 1px;
 }

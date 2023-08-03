@@ -5,8 +5,8 @@
   margin-inline-start: var(--grid-spacing);
   margin-inline-end: var(--grid-spacing);
   max-width: 1800px;
-  flex: 1;
   min-height: 100%;
+  flex: 1;
   display: grid;
   grid-template-areas: "intro"
                        "."

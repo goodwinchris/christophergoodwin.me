@@ -3,9 +3,9 @@
 }
 
 .introduction__social {
-  display: grid;
   margin-block-start: .5rem;
   margin-inline-start: -.5rem;
+  display: grid;
   grid-template-columns: min-content min-content;
   
   @media (min-width: 450px) {

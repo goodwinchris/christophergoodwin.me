@@ -1,7 +1,7 @@
 .blog__heading {
   margin-block-end: .75rem;
-  display: inline-block;
   width: 100%;
+  display: inline-block;
 }
 
 .blog__post {
@@ -23,13 +23,13 @@
   &:focus-visible::after {
     content: "";
     width: calc(100% + 8px);    
-    background: transparent;
+    height: calc(100% + 4px);
     position: absolute;
     inset-block-end: 1px;
     inset-inline-start: -4px;
     z-index: -2;
+    background: transparent;
     border-radius: 6px;
-    height: calc(100% + 4px);
     box-shadow: 0 0 0 .15em var(--foreground);
   }
 }
