@@ -1,0 +1,18 @@
+.introduction__heading {
+  margin-block-end: calc(1rem - 3px);
+}
+
+.introduction__social {
+  margin-block-start: .5rem;
+  margin-inline-start: -.5rem;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  
+  @media (min-width: 450px) {
+    grid-template-columns: min-content min-content min-content min-content;
+  }
+}
+
+.introduction__social__link {
+  padding: .5rem;
+}

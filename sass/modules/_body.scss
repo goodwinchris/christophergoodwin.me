@@ -1,9 +1,8 @@
 body {
-  display: flex;
   min-height: 100vh;
+  display: flex;
   box-sizing: border-box;
-  background: linear-gradient(to top right, var(--background-one), var(--background-two));
-  font-family: var(--font-family);
+  background-color: var(--background);
   font-size: 1rem;
   
   @media (prefers-reduced-motion: no-preference) {
