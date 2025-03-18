@@ -1,13 +1,13 @@
 :root {
   --body-background: #1c1c1e;
-  --background: #46252e;
-  --foreground: #faeef1;
+  --background: #41294b;
+  --foreground: #e2d5bb;
 
-  @media (prefers-color-scheme: light) {
-    --body-background: #fff;
-    --background: #e0d0d4;
-    --foreground: #5b303b;
-  }
+  // @media (prefers-color-scheme: light) {
+  //   --body-background: #fff;
+  //   --background: #e0d0d4;
+  //   --foreground: #5b303b;
+  // }
 
   --type-scale: 1;
   --font-size-16: 1rem;
