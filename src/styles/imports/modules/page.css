@@ -79,8 +79,9 @@
   grid-area: post;
 }
 
-.page__blog-post-heading__back-link {
+a.page__blog-post-heading__back-link {
   margin-bottom: 3rem;
+  display: inline-block;
 }
 
 .page__blog-post-heading__description {
