@@ -1,0 +1,7 @@
+---
+const {title, url, linkDescription, external} = Astro.props;
+---
+<a class="blog__post" href={url} {...(external ? { rel: "noopener noreferrer", target: "_blank" } : {})}>
+  <h3 class="t-heading-small blog__post__heading">{title}</h3>
+  <p class="t-body">{linkDescription}</p>
+</a>

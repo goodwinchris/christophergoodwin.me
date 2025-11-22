@@ -1,0 +1,28 @@
+---
+title: 'Hosting My Own Blog'
+pubDate: 2025-11-21
+linkDescription: 'The story of how I got here'
+postDescription: ''
+author: 'Chris Goodwin'
+image:
+    url: 'https://docs.astro.build/assets/rose.webp'
+    alt: 'The Astro logo on a dark background with a pink glow.'
+tags: ["web"]
+---
+I’ve been an amateur photographer for a long time. Beginning in high school all the way through today. Looking back on all that time, it seems my cameras have behaved more like good friends than artistic tools; meeting me where I am and allowing that to be enough.
+
+In the seasons I have been busy, my cameras have waited patiently. In those which I have been creatively drained, they have understood. In those which I have been pursuing other outlets, they have never watched on in envy.
+
+In the seasons I have needed distraction, they have encouraged me to get outside or go for a drive. In those which I have craved the act of creative pursuit, they have always been excited to go on another adventure.
+
+All of this to say, when <a href="https://lukejones.me" target="_blank">my buddy Luke</a> began expressing interest in picking up film photography, I was excited to help him find his way. I spoke with him about what he was looking for, helped him make some decisions, and lent him a camera which deserved another adventure of its own.
+
+Luke did fall in love with photography and he recently sent me a <a href="https://lukejones.me/shooting-film-2024-2025/" target="_blank">blog post he’d written about his new found passion</a>. His link led me to his post Hist post lead to admiring his blog. Admiring his blog led to asking more about his tech stack. Asking about his tech stack led to researching <a href="https://astro.build/" target="_blank">Astro</a>. And researching Astro led to building my own blog.
+
+The circle completes.
+
+So here I am, with a new blog. I am equal parts excited and doubtful. Excited to have my own little corner of the internet to post all I want. Like many of us, I am growing weary of the bottomless well of social media. Doubtful because I fear this outlet may become its own burden over time as well.
+
+However, just as my cameras have met me exactly where I have been, I am hopeful this blog will do the same.
+
+Either way, I’m here now and so are you, thanks!

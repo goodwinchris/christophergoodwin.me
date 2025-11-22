@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   background-color: var(--background);
   font-size: 1rem;
-  
+/*   
   @media (prefers-reduced-motion: no-preference) {
     opacity: 0;
     animation-delay: .5s;
@@ -12,5 +12,5 @@ body {
     animation-name: fadeIn;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
-  }
+  } */
 }

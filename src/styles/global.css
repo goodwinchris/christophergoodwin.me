@@ -1,0 +1,10 @@
+@import "imports/variables.css";
+@import "imports/fonts.css";
+@import "imports/reset.css"; 
+@import "imports/type.css";
+@import "imports/animations.css";
+
+@import "imports/modules/body.css";
+@import "imports/modules/page.css";
+@import "imports/modules/introduction.css";
+@import "imports/modules/blog.css";

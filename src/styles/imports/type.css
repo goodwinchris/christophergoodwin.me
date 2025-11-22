@@ -1,4 +1,5 @@
-.t-heading {
+.t-heading,
+.page--blog h1 {
   font-size: var(--font-size-48);
   font-family: var(--font-family-heading);
   font-weight: 400;
@@ -6,7 +7,8 @@
   color: var(--foreground);
 }
 
-.t-heading-small {
+.t-heading-small,
+.page--blog h2 {
   font-size: var(--font-size-24);
   font-weight: 900;
   line-height: 1.25em;
@@ -22,7 +24,8 @@
   color: var(--foreground);
 }
 
-.t-body {
+.t-body,
+.page--blog p {
   font-size: var(--font-size-18);
   font-weight: 300;
   line-height: 1.5em;
@@ -45,7 +48,8 @@
   color: var(--foreground);
 }
 
-.t-link {
+.t-link,
+.page--blog a {
   font-weight: 900;
   display: inline-block;
   position: relative;
@@ -89,6 +93,25 @@
       background: transparent;
       box-shadow: 0 0 0 .15em var(--foreground);
       border-radius: 4px;
+    }
+  }
+}
+
+.page--blog a {
+  text-decoration: underline;
+  text-decoration-thickness: .1em;
+  text-decoration-style: dotted;
+  text-underline-offset: .166em;
+  display: inline-block;
+
+  &:hover {
+    text-underline-offset: .444rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+  @media (hover: hover) {
+      transition: .6s cubic-bezier(0,0,.25,1) text-underline-offset, 
+      .6s cubic-bezier(0,0,.25,1) transform;
     }
   }
 }
