@@ -43,7 +43,7 @@ const { frontmatter } = Astro.props;
     <h1 class="visually-hidden">Christopher Goodwin’s Personal Portfolio</h1>
     <main class="page page--blog">
       <div class="page__blog-post-heading">
-        <a class="page__blog-post-heading__back-link" href="../../blog">Go Back Home</a>
+        <a class="page__blog-post-heading__back-link" href="/">Go Back Home</a>
         <p>{frontmatter.pubDate.toLocaleDateString('en-US', {timeZone: 'UTC'})}</p>
         <h1>{frontmatter.title}</h1>
         {frontmatter.description && (
