@@ -2,48 +2,57 @@
 import { getCollection } from "astro:content";
 import BlogPostLink from "../BlogPostLink.astro";
 
-const allPosts = await getCollection("blog");
+const { allowedTag } = Astro.props;
+const allPosts = await getCollection("blog", ({ data }) =>
+  data.tags.some(tag => allowedTag === tag)
+);
 ---
 <div class="page__blog blog">
-  <h2 class="t-heading blog__heading">Blog Posts</h2>
-    {allPosts.map((post: any) => (
-      <BlogPostLink url={`/${post.id}/`} title={post.data.title} linkDescription={post.data.linkDescription}/>
-    ))}
+  { allowedTag.toString() == 'professional' ? (
+    <h2 class="t-heading blog__heading">Blog Posts</h2>
+  ) : (
+    <h2 class="t-heading blog__heading">Personal Posts</h2>
+  )}
+  {allPosts.toReversed().map((post: any) => (
+    <BlogPostLink url={`/${post.id}/`} title={post.data.title} linkDescription={post.data.linkDescription}/>
+  ))}
 
-  <BlogPostLink 
-    url="https://medium.com/@christophergoodwin.me/accessible-file-uploads-9ecacac17276"
-    title="Accessible File Uploads"
-    linkDescription="Browser native functionality styled to look great"
-    external="true"
-  />
-  <BlogPostLink
-    url="https://dockyard.com/blog/2020/02/19/svgs-and-selects-the-accessible-and-semantic-way"
-    title="SVGs and Selects"
-    linkDescription="An accessible way to work with images and selects"
-    external="true"
-  />
-  <BlogPostLink
-    url="https://dockyard.com/blog/2019/05/22/the-digital-desk-deep-dive"
-    title="The Digital Desk Deep Dive"
-    linkDescription="Tips, tricks, and tools to keep your digital desk clean"
-    external="true"
-  />
-  <BlogPostLink
-    url="https://dockyard.com/blog/2019/02/14/introducing-hover-hover"
-    title="Introducing Hover: Hover"
-    linkDescription="Using Interaction Media Queries to manage hover"
-    external="true"
-  />
-  <BlogPostLink
-    url="https://dockyard.com/blog/2018/06/27/customizing-slack-to-work-for-you"
-    title="Customizing Slack to Work for You"
-    linkDescription="A few tweaks to make Slack more usable"
-    external="true"
-  />
-  <BlogPostLink
-    url="https://dockyard.com/blog/2017/12/20/first-child-last-child-nth-child-and-not-nth-child"
-    title="Pseudo-class Crash Course"
-    linkDescription="An intro to :first-child, :last-child, :nth-child, and :not"
-    external="true"
-  />
+  { allowedTag.toString() == 'professional' && (
+    <BlogPostLink 
+      url="https://medium.com/@christophergoodwin.me/accessible-file-uploads-9ecacac17276"
+      title="Accessible File Uploads"
+      linkDescription="Browser native functionality styled to look great"
+      external="true"
+    />
+    <BlogPostLink
+      url="https://dockyard.com/blog/2020/02/19/svgs-and-selects-the-accessible-and-semantic-way"
+      title="SVGs and Selects"
+      linkDescription="An accessible way to work with images and selects"
+      external="true"
+    />
+    <BlogPostLink
+      url="https://dockyard.com/blog/2019/05/22/the-digital-desk-deep-dive"
+      title="The Digital Desk Deep Dive"
+      linkDescription="Tips, tricks, and tools to keep your digital desk clean"
+      external="true"
+    />
+    <BlogPostLink
+      url="https://dockyard.com/blog/2019/02/14/introducing-hover-hover"
+      title="Introducing Hover: Hover"
+      linkDescription="Using Interaction Media Queries to manage hover"
+      external="true"
+    />
+    <BlogPostLink
+      url="https://dockyard.com/blog/2018/06/27/customizing-slack-to-work-for-you"
+      title="Customizing Slack to Work for You"
+      linkDescription="A few tweaks to make Slack more usable"
+      external="true"
+    />
+    <BlogPostLink
+      url="https://dockyard.com/blog/2017/12/20/first-child-last-child-nth-child-and-not-nth-child"
+      title="Pseudo-class Crash Course"
+      linkDescription="An intro to :first-child, :last-child, :nth-child, and :not"
+      external="true"
+    />
+  )}
 </div>
