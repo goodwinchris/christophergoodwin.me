@@ -25,5 +25,5 @@ const {title, url, linkDescription, external} = Astro.props;
       </svg>
     }
   </h3>
-  <p>{linkDescription}</p>
+  {linkDescription && <p>{linkDescription}</p>}
 </a>

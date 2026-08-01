@@ -9,16 +9,16 @@ image:
     alt: ''
 tags: ["photography"]
 ---
-<img src="/public/images/photography/2025-winter/1.jpg" />
-<img src="/public/images/photography/2025-winter/2.jpg" />
-<img class="tall" src="/public/images/photography/2025-winter/3-t.jpg" />
-<img class="tall" src="/public/images/photography/2025-winter/4-t.jpg" />
-<img src="/public/images/photography/2025-winter/5.jpg" />
-<img src="/public/images/photography/2025-winter/6.jpg" />
-<img src="/public/images/photography/2025-winter/7.jpg" />
-<img src="/public/images/photography/2025-winter/8.jpg" />
-<img src="/public/images/photography/2025-winter/9.jpg" />
-<img src="/public/images/photography/2025-winter/10.jpg" />
-<img src="/public/images/photography/2025-winter/11.jpg" />
-<img src="/public/images/photography/2025-winter/12.jpg" />
+<img src="/src/images/photography/2025-winter/1.JPG" />
+<img src="/src/images/photography/2025-winter/2.jpg" />
+<img src="/src/images/photography/2025-winter/3-T.jpg" />
+<img src="/src/images/photography/2025-winter/4-T.jpg" />
+<img src="/src/images/photography/2025-winter/5.jpg" />
+<img src="/src/images/photography/2025-winter/6.jpg" />
+<img src="/src/images/photography/2025-winter/7.jpg" />
+<img src="/src/images/photography/2025-winter/8.jpg" />
+<img src="/src/images/photography/2025-winter/9.jpg" />
+<img src="/src/images/photography/2025-winter/10.jpg" />
+<img src="/src/images/photography/2025-winter/11.jpg" />
+<img src="/src/images/photography/2025-winter/12.jpg" />
  

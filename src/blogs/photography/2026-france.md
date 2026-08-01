@@ -9,16 +9,16 @@ image:
     alt: ''
 tags: ["photography"]
 ---
-<img src="/public/images/photography/2026-france/1.jpg" />
-<img src="/public/images/photography/2026-france/2.jpg" />
-<img src="/public/images/photography/2026-france/3.jpg" />
-<img src="/public/images/photography/2026-france/4.jpg" />
-<img src="/public/images/photography/2026-france/5.jpg" />
-<img src="/public/images/photography/2026-france/6.jpg" />
-<img src="/public/images/photography/2026-france/7.jpg" />
-<img src="/public/images/photography/2026-france/8.jpg" />
-<img src="/public/images/photography/2026-france/9.jpg" />
-<img src="/public/images/photography/2026-france/10.jpg" />
-<img src="/public/images/photography/2026-france/11.jpg" />
-<img src="/public/images/photography/2026-france/12.jpg" />
-<img src="/public/images/photography/2026-france/13.jpg" />
+<img src="/src/images/photography/2026-france/1.jpg" />
+<img src="/src/images/photography/2026-france/2.jpg" />
+<img src="/src/images/photography/2026-france/3.jpg" />
+<img src="/src/images/photography/2026-france/4.jpg" />
+<img src="/src/images/photography/2026-france/5.jpg" />
+<img src="/src/images/photography/2026-france/6.jpg" />
+<img src="/src/images/photography/2026-france/7.jpg" />
+<img src="/src/images/photography/2026-france/8.jpg" />
+<img src="/src/images/photography/2026-france/9.jpg" />
+<img src="/src/images/photography/2026-france/10.jpg" />
+<img src="/src/images/photography/2026-france/11.jpg" />
+<img src="/src/images/photography/2026-france/12.jpg" />
+<img src="/src/images/photography/2026-france/13.jpg" />
