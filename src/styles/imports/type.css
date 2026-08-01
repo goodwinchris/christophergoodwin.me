@@ -11,7 +11,7 @@
 a, button {
   color: var(--text-color);
   text-decoration: underline;
-  text-decoration-thickness: .13em;
+  text-decoration-thickness: .07em;
   text-decoration-style: underline;
   text-underline-offset: .166em;
 
@@ -29,6 +29,7 @@ a, button {
 
   &.active {
     font-weight: 700;
+    text-decoration-thickness: .13em;
   }
 }
 
