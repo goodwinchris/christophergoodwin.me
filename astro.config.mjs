@@ -10,17 +10,17 @@ export default defineConfig({
         cssVariable: "--font-edmondsans",
         options: {
             variants: [{
-                src: ['./src/assets/fonts/edmondsans/edmondsans-regular.woff2', './src/assets/fonts/edmondsans/edmondsans-regular.woff'],
+                src: ['./src/assets/fonts/edmondsans/edmondsans-regular.woff2'],
                 weight: '400',
                 style: 'normal'
             },
             {
-                src: ['./src/assets/fonts/edmondsans/edmondsans-medium.woff2', './src/assets/fonts/edmondsans/edmondsans-medium.woff'],
+                src: ['./src/assets/fonts/edmondsans/edmondsans-medium.woff2'],
                 weight: '500',
                 style: 'normal'
             },
             {
-                src: ['./src/assets/fonts/edmondsans/edmondsans-bold.woff2', './src/assets/fonts/edmondsans/edmondsans-bold.woff'],
+                src: ['./src/assets/fonts/edmondsans/edmondsans-bold.woff2'],
                 weight: '700',
                 style: 'normal'
             }]
