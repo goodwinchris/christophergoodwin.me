@@ -6,11 +6,13 @@ const {title, url, linkDescription, external} = Astro.props;
   h3 {
     font-weight: 700;
     display: flex;
-    gap: 1ch;
+    gap: .5ch;
+    align-items: baseline;
   
-    svg {
-      inline-size: 16px;
+    img {
+      inline-size: 14px;
       fill: var(--text-color);
+      color: var(--text-color);
     }
   }
 </style>
@@ -20,7 +22,7 @@ const {title, url, linkDescription, external} = Astro.props;
     {title}
     {external &&
       <p class="visually-hidden">(external)</p>
-      <img src="./src/assets/images/external.svg" role="presentation" />
+      <img src="/src/assets/images/external.svg" role="presentation" />
     }
   </h3>
   {linkDescription && <p>{linkDescription}</p>}
