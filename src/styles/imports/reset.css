@@ -33,7 +33,7 @@ html {
   background-color: var(--body-background);
 }
 body {
-  font-family: var(--font-family-body);
+  font-family: var(--font-edmondsans);
   color: var(--text-color);
   line-height: 1;
 }
