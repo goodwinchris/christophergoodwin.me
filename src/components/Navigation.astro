@@ -10,17 +10,19 @@ const isActive = (href: string) =>
   nav {
     display: flex;
     flex-direction: column;
-    position: sticky;
+    position: fixed;
+    inline-size: 100vw;
+    inset-inline-start: 0;
     text-wrap: nowrap;
     inset-block-start: 0;
-    padding-block-start: 1.5em;
-    padding-block-end: 1.5em;
-    margin-block-start: -1.5em;
+    padding: 1.5em;
     background-color: var(--body-background);
     z-index: 1;
     min-inline-size: 106px;
     
     @media (min-width: 500px) {
+      inline-size: unset;
+      position: sticky;
       padding: 0;
       margin: 0;
       inset-block-start: 50%;
