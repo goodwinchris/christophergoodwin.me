@@ -5,6 +5,6 @@ import BlogPostLink from "../BlogPostLink.astro";
 const allPosts = await getCollection("photography");
 
 ---
-{allPosts.toReversed().map((post: any) => (
+{allPosts.toSorted((a, b) => a.data.title.localeCompare(b.data.title)).map((post: any) => (
   <BlogPostLink url={`/photography/${post.id}/`} title={post.data.title} linkDescription={post.data.linkDescription}/>
 ))}
