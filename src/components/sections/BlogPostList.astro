@@ -8,7 +8,7 @@ const allPosts = await getCollection("blog");
 {allPosts.toReversed().map((post: any) => (
   <BlogPostLink url={`/blog/${post.id}/`} title={post.data.title} linkDescription={post.data.linkDescription}/>
 ))}
-<BlogPostLink 
+<!-- <BlogPostLink 
   url="https://medium.com/@christophergoodwin.me/accessible-file-uploads-9ecacac17276"
   title="Accessible File Uploads"
   linkDescription="Browser native functionality styled to look great"
@@ -43,4 +43,4 @@ const allPosts = await getCollection("blog");
   title="Pseudo-class Crash Course"
   linkDescription="An intro to :first-child, :last-child, :nth-child, and :not"
   external="true"
-/>
+/> -->
