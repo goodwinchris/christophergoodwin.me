@@ -1,6 +1,6 @@
 body {
-  block-size: 100vh;
-  inline-size: 100vw;
+  block-size: 100dvh;
+  inline-size: 100dvw;
   color: var(--text-color);
   display: flex;
   flex-direction: column;
