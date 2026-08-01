@@ -30,7 +30,8 @@ main {
   overflow: visible;
   position: relative;
   grid-row: 3 / 4;
-  align-content: end;
+  align-content: start;
+  margin-block-end: env(safe-area-inset-bottom);
   
   @media (min-width: 500px) {    
     align-content: unset;

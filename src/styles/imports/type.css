@@ -11,8 +11,8 @@
 a, button {
   color: var(--text-color);
   text-decoration: underline;
-  text-decoration-thickness: .15em;
-  text-decoration-style: dotted;
+  text-decoration-thickness: .07em;
+  text-decoration-style: underline;
   text-underline-offset: .166em;
 
   @media (prefers-reduced-motion: no-preference) {
@@ -28,7 +28,8 @@ a, button {
   }
 
   &.active {
-    font-weight: bold;
+    font-weight: 700;
+    text-decoration-thickness: .13em;
   }
 }
 
@@ -36,8 +37,8 @@ a:has(h3) {
   text-decoration: none;
   h3 {
     text-decoration: underline;
-    text-decoration-thickness: .15em;
-    text-decoration-style: dotted;
+    text-decoration-thickness: .13em;
+    text-decoration-style: underline;
     text-underline-offset: .166em;
 
     @media (prefers-reduced-motion: no-preference) {
