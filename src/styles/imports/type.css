@@ -12,7 +12,7 @@ a, button {
   color: var(--text-color);
   text-decoration: underline;
   text-decoration-thickness: .15em;
-  text-decoration-style: dotted;
+  text-decoration-style: underline;
   text-underline-offset: .166em;
 
   @media (prefers-reduced-motion: no-preference) {
@@ -37,7 +37,7 @@ a:has(h3) {
   h3 {
     text-decoration: underline;
     text-decoration-thickness: .15em;
-    text-decoration-style: dotted;
+    text-decoration-style: underline;
     text-underline-offset: .166em;
 
     @media (prefers-reduced-motion: no-preference) {
