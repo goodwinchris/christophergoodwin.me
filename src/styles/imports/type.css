@@ -28,7 +28,7 @@ a, button {
   }
 
   &.active {
-    font-weight: bold;
+    font-weight: 700;
   }
 }
 
