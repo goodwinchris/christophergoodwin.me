@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'FatFrank';
-  src: url('./src/fonts/fatfrank/fatfrank-regular.eot');
-  src: url('./src/fonts/fatfrank/fatfrank-regular.woff2') format('woff2'),
-      url('./src/fonts/fatfrank/fatfrank-regular.woff') format('woff'),
-      url('./src/fonts/fatfrank/fatfrank-regular.ttf') format('truetype');
+  src: url('/src/fonts/fatfrank/fatfrank-regular.eot');
+  src: url('/src/fonts/fatfrank/fatfrank-regular.woff2') format('woff2'),
+      url('/src/fonts/fatfrank/fatfrank-regular.woff') format('woff'),
+      url('/src/fonts/fatfrank/fatfrank-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Edmondsans';
-  src: url('./src/fonts/edmondsans/edmondsans-regular.eot');
-  src: url('./src/fonts/edmondsans/edmondsans-regular.eot?#iefix') format('embedded-opentype'),
-      url('./src/fonts/edmondsans/edmondsans-regular.woff2') format('woff2'),
-      url('./src/fonts/edmondsans/edmondsans-regular.woff') format('woff'),
-      url('./src/fonts/edmondsans/edmondsans-regular.ttf') format('truetype');
+  src: url('/src/fonts/edmondsans/edmondsans-regular.eot');
+  src: url('/src/fonts/edmondsans/edmondsans-regular.eot?#iefix') format('embedded-opentype'),
+      url('/src/fonts/edmondsans/edmondsans-regular.woff2') format('woff2'),
+      url('/src/fonts/edmondsans/edmondsans-regular.woff') format('woff'),
+      url('/src/fonts/edmondsans/edmondsans-regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -22,11 +22,11 @@
 
 @font-face {
   font-family: 'Edmondsans';
-  src: url('./src/fonts/edmondsans/edmondsans-medium.eot');
-  src: url('./src/fonts/edmondsans/edmondsans-medium.eot?#iefix') format('embedded-opentype'),
-      url('./src/fonts/edmondsans/edmondsans-medium.woff2') format('woff2'),
-      url('./src/fonts/edmondsans/edmondsans-medium.woff') format('woff'),
-      url('./src/fonts/edmondsans/edmondsans-medium.ttf') format('truetype');
+  src: url('/src/fonts/edmondsans/edmondsans-medium.eot');
+  src: url('/src/fonts/edmondsans/edmondsans-medium.eot?#iefix') format('embedded-opentype'),
+      url('/src/fonts/edmondsans/edmondsans-medium.woff2') format('woff2'),
+      url('/src/fonts/edmondsans/edmondsans-medium.woff') format('woff'),
+      url('/src/fonts/edmondsans/edmondsans-medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -34,11 +34,11 @@
 
 @font-face {
   font-family: 'Edmondsans';
-  src: url('./src/fonts/edmondsans/edmondsans-bold.eot');
-  src: url('./src/fonts/edmondsans/edmondsans-bold.eot?#iefix') format('embedded-opentype'),
-      url('./src/fonts/edmondsans/edmondsans-bold.woff2') format('woff2'),
-      url('./src/fonts/edmondsans/edmondsans-bold.woff') format('woff'),
-      url('./src/fonts/edmondsans/edmondsans-bold.ttf') format('truetype');
+  src: url('/src/fonts/edmondsans/edmondsans-bold.eot');
+  src: url('/src/fonts/edmondsans/edmondsans-bold.eot?#iefix') format('embedded-opentype'),
+      url('/src/fonts/edmondsans/edmondsans-bold.woff2') format('woff2'),
+      url('/src/fonts/edmondsans/edmondsans-bold.woff') format('woff'),
+      url('/src/fonts/edmondsans/edmondsans-bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
