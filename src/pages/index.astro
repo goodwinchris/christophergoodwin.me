@@ -3,4 +3,82 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = 'Home | Christopher Goodwin';
 ---
-<BaseLayout pageTitle={pageTitle} />
+<style>
+  img {
+    /* aspect-ratio: 2.5; */
+    block-size: 9em;
+    max-block-size: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
+    grid-column: 1 / 2;
+    border-radius: 6px;
+    position: absolute;
+    inset-block-end: 100%;
+    inset-inline-start: 0;
+    max-inline-size: 550px;
+    inline-size: 100%;
+    margin-bottom: 1.5em;
+    opacity: 0;
+    transform: translateY(.5em);
+    transition: opacity .4s ease, transform .4s ease;
+
+    @media (min-width: 500px) {
+      block-size: 12em;
+      object-position: 50% 37.5%;
+    }
+  }
+
+  button {
+    border: 0;
+    background: none;
+    font-size: 1em;
+    font-family: var(--font-family-body);
+    margin: -16px;
+    padding: 16px;
+    outline-offset: -6px;
+
+    @media (min-width: 500px) and (max-height: 619px) {
+      pointer-events: none;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    display: inline;
+  }
+
+  ul {
+    display: flex;
+    gap: 1lh;
+  }
+
+  button:hover,
+  button:focus,
+  button:focus-visible { 
+    img {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<BaseLayout pageTitle={pageTitle}>
+  <p>Hello!
+    <button>
+      I’m Chris
+      <img src="/public/images/chris.jpg" alt="A portrait of Chris Goodwin on Maine's coast. He is wearing a hat and a rain jacket with a plaid undershirt." />
+    </button>, a Senior User Experience Developer with more than 10 years of experience building web applications empowering and delighting users.
+  </p>
+  <p>Prioritizing user experience and accessibility, I translate design visions into semantic HTML, modular CSS, and lightweight JavaScript.</p>       
+  <ul>
+    <li>
+      <a target="_blank" href="mailto:hello@christophergoodwin.me" rel="noopener noreferrer">Email</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://github.com/goodwinchris" rel="noopener noreferrer">GitHub</a>
+    </li>
+    <li>
+      <a target="_blank" href="./files/ChristopherGoodwinResume.pdf" rel="noopener noreferrer">Resume</a>
+    </li>
+  </ul>
+</BaseLayout>

@@ -1,24 +1,12 @@
 :root {
-  --body-background: #1c1c1e;
-  --background: #46252e;
-  --foreground: #faeef1;
+  --body-background: #f5f2f0;
+  --text-color: #1C1522;
+  --link-color: var(--text-color);
 
-  @media (prefers-color-scheme: light) {
-    --body-background: #fff;
-    --background: #e0d0d4;
-    --foreground: #5b303b;
-  }
-
-  --type-scale: 1;
-  --font-size-16: 1rem;
-  --font-size-18: 1.125rem;
-  --font-size-24: calc(1.5rem * var(--type-scale));
-  --font-size-48: calc(3rem * var(--type-scale));
-  --font-size-96: calc(6rem * var(--type-scale));
-  --font-size-192: calc(12rem * var(--type-scale));
-
-  @media (max-width: 599px) {
-    --type-scale: .75;
+  @media (prefers-color-scheme: dark) {
+    --body-background: #09070B;
+    --text-color: #ece8dc;
+    --link-color: var(--text-color);
   }
 
   --font-family-heading: "Fatfrank", sans-serif;

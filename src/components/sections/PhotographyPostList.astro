@@ -1,0 +1,10 @@
+---
+import { getCollection } from "astro:content";
+import BlogPostLink from "../BlogPostLink.astro";
+
+const allPosts = await getCollection("photography");
+
+---
+{allPosts.toReversed().map((post: any) => (
+  <BlogPostLink url={`/photography/${post.id}/`} title={post.data.title} linkDescription={post.data.linkDescription}/>
+))}

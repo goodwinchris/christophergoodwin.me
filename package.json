@@ -1,7 +1,7 @@
 {
-  "name": "25-christophergoodwin-me",
+  "name": "26-christophergoodwin-me",
   "type": "module",
-  "version": "0.0.1",
+  "version": "4.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
