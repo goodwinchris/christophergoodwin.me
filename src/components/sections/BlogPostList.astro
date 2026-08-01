@@ -8,13 +8,13 @@ const allPosts = await getCollection("blog");
 {allPosts.toReversed().map((post: any) => (
   <BlogPostLink url={`/blog/${post.id}/`} title={post.data.title} linkDescription={post.data.linkDescription}/>
 ))}
-<!-- <BlogPostLink 
+<BlogPostLink 
   url="https://medium.com/@christophergoodwin.me/accessible-file-uploads-9ecacac17276"
   title="Accessible File Uploads"
   linkDescription="Browser native functionality styled to look great"
   external="true"
 />
-<BlogPostLink
+<!-- <BlogPostLink
   url="https://dockyard.com/blog/2020/02/19/svgs-and-selects-the-accessible-and-semantic-way"
   title="SVGs and Selects"
   linkDescription="An accessible way to work with images and selects"
