@@ -1,0 +1,43 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id }, props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<style>
+  h1 {
+    font-weight: bold;
+  }
+
+  .back-link {
+    position: absolute;
+    inset-block-end: 100%;
+  }
+</style>
+
+<BaseLayout frontmatter={post.data}>
+  <a class="back-link" href="/blog">
+    <span>Back to All Posts</span>
+  </a>
+  <div>
+    <time 
+      datetime={post.data.pubDate.toLocaleDateString('en-US', {timeZone: 'UTC'})}
+    >
+      {post.data.pubDate.toLocaleDateString('en-US', {timeZone: 'UTC'})}
+    </time>
+    <h1>{post.data.title}</h1>
+    {post.data.postDescription && (
+      <p>{post.data.postDescription}</p>
+    )}
+  </div>
+  <Content />
+</BaseLayout>

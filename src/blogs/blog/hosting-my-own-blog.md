@@ -5,9 +5,9 @@ linkDescription: 'The story of how I got here'
 postDescription: ''
 author: 'Chris Goodwin'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["web"]
+    url: ''
+    alt: ''
+tags: ["web", "professional"]
 ---
 I’ve been an amateur photographer for a long time. Beginning in high school all the way through today. Looking back on all that time, it seems my cameras have behaved more like good friends than artistic tools; meeting me where I am and allowing that to be enough.
 
@@ -17,7 +17,7 @@ In the seasons I have needed distraction, they have encouraged me to get outside
 
 All of this to say, when <a href="https://lukejones.me" target="_blank">my buddy Luke</a> began expressing interest in picking up film photography, I was excited to help him find his way. I spoke with him about what he was looking for, helped him make some decisions, and lent him a camera which deserved another adventure of its own.
 
-Luke did fall in love with photography and he recently sent me a <a href="https://lukejones.me/shooting-film-2024-2025/" target="_blank">blog post he’d written about his new found passion</a>. His link led to his post. His post lead to admiring his blog. Admiring his blog led to asking more about his tech stack. Asking about his tech stack led to researching <a href="https://astro.build/" target="_blank">Astro</a>. And researching Astro led to building my own blog.
+Luke did fall in love with photography and he recently sent me a <a href="https://lukejones.me/shooting-film-2024-2025/" target="_blank">blog post he’d written about his new found passion</a>. His link led me to his post. His post lead to admiring his blog. Admiring his blog led to asking more about his tech stack. Asking about his tech stack led to researching <a href="https://astro.build/" target="_blank">Astro</a>. And researching Astro led to building my own blog.
 
 The circle completes.
 

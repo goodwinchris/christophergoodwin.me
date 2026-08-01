@@ -1,0 +1,46 @@
+---
+const pathname = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === '/'
+    ? pathname === '/'
+    : pathname === href || pathname.startsWith(href + '/');
+---
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    text-wrap: nowrap;
+    inset-block-start: 0;
+    padding-block-start: 1.5em;
+    padding-block-end: 1.5em;
+    margin-block-start: -1.5em;
+    background-color: var(--body-background);
+    z-index: 1;
+    min-inline-size: 106px;
+    
+    @media (min-width: 500px) {
+      padding: 0;
+      margin: 0;
+      inset-block-start: 50%;
+      transform: translateY(-50%);
+      margin-inline-end: 3em;
+      grid-row: 2 / 3;
+      justify-self: end;
+    }
+
+    a {
+      align-self: start;
+    }
+  }
+</style>
+
+
+<nav>
+  <a href="/" class={isActive('/') ? 'active' : ''}>Home</a>
+  <!-- <a href="#" class={isActive('/about') ? 'active' : ''}>About</a> -->
+  <!-- <a href="/work" class={isActive('/work') ? 'active' : ''}>Work</a> -->
+  <a href="/blog" class={isActive('/blog') ? 'active' : ''}>Blog</a>
+  <a href="/photography" class={isActive('/photography') ? 'active' : ''}>Photography</a>
+</nav>

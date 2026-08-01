@@ -1,0 +1,9 @@
+---
+import BlogPostList from "../../components/sections/BlogPostList.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageTitle = 'Blog | Christopher Goodwin';
+---
+<BaseLayout pageTitle={pageTitle}>
+  <BlogPostList allowedTag="professional" />
+</BaseLayout>
