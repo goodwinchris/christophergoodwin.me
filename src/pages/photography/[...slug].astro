@@ -29,11 +29,6 @@ const { Content } = await render(post);
     <span>Back to All Posts</span>
   </a>
   <div>
-    <!-- <time 
-      datetime={post.data.pubDate.toLocaleDateString('en-US', {timeZone: 'UTC'})}
-    >
-      {post.data.pubDate.toLocaleDateString('en-US', {timeZone: 'UTC'})}
-    </time> -->
     <h1>{post.data.title}</h1>
     {post.data.postDescription && (
       <p>{post.data.postDescription}</p>

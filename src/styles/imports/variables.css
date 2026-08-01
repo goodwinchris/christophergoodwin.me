@@ -4,11 +4,8 @@
   --link-color: var(--text-color);
 
   @media (prefers-color-scheme: dark) {
-    --body-background: #09070B;
+    --body-background: #16101C;
     --text-color: #ece8dc;
     --link-color: var(--text-color);
   }
-/* 
-  --font-family-heading: "Fatfrank", sans-serif;
-  --font-family-body: "Edmondsans", sans-serif; */
 }
