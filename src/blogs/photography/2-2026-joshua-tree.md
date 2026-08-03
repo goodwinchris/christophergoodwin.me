@@ -1,5 +1,5 @@
 ---
-title: 'Joshua Tree 2026'
+title: 'Joshua Tree'
 pubDate: 2026-07-31
 linkDescription: ''
 postDescription: ''
