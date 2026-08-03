@@ -24,7 +24,7 @@ const { Content } = await render(post);
   }
 </style>
 
-<BaseLayout frontmatter={post.data}>
+<BaseLayout frontmatter={post.data} pageTitle={post.data.title + ' | Work | Christopher Goodwin'}>
   <a class="back-link" href="/work">
     <span>Back to All Posts</span>
   </a>

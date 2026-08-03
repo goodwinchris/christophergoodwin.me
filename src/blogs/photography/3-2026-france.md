@@ -1,5 +1,5 @@
 ---
-title: 'France 2026'
+title: 'France'
 pubDate: 2026-07-31
 linkDescription: ''
 postDescription: ''
