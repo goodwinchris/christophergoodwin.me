@@ -26,5 +26,5 @@ const resolveImageUrl = (src: string) => {
   <!-- <p>Photographs from my trip to France.</p> -->
 </div>
 {filteredImageList().map((img) => (
-  <img src={resolveImageUrl(img.src)} alt={img.alt || img.title || img.src} loading="lazy" />
+  <img src={resolveImageUrl(img.src)} loading="lazy" />
 ))}
