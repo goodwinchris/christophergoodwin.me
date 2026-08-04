@@ -1,10 +1,21 @@
 ---
-import { getCollection } from "astro:content";
-import BlogPostLink from "../BlogPostLink.astro";
-
-const allPosts = await getCollection("photography");
-
+// import types
+import type { ImageCollections } from '../../types/types';
+import {imageCollections} from '../../types/types';
 ---
-{allPosts.toSorted((a, b) => a.data.title.localeCompare(b.data.title)).map((post: any) => (
-  <BlogPostLink url={`/photography/${post.id}/`} title={post.data.title} linkDescription={post.data.linkDescription}/>
-))}
+<style>
+    h3 {
+      font-weight: 700;
+      display: flex;
+      gap: .5ch;
+      align-items: baseline;
+    }
+</style>
+
+{
+  imageCollections.map((collection: ImageCollections) => (
+    <a href={`/photography/${collection.toLowerCase().replace(' ', '-')}`}>
+      <h3>{collection}</h3>
+    </a>
+  ))  
+}

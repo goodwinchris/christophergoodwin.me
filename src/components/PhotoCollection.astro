@@ -1,0 +1,20 @@
+---
+import imageInfo from '../assets/image-info.json';
+const { collectionName } = Astro.props;
+const filteredImageList = () => {
+  if (!collectionName || collectionName === 'Photo Feed') {
+    return imageInfo.toReversed();
+  }
+  return imageInfo.filter((image) => image.collection === collectionName);
+}
+---
+<a class="back-link" href="/photography">
+  <span>Back to Photography</span>
+</a>
+<div>
+  <h1>{collectionName}</h1>
+  <!-- <p>Photographs from my trip to France.</p> -->
+</div>
+{filteredImageList().map((img) => (
+  <img src={img.src} />
+))}
