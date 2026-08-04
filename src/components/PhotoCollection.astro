@@ -1,11 +1,21 @@
 ---
 import imageInfo from '../assets/image-info.json';
 const { collectionName } = Astro.props;
+
+const imageModules = import.meta.glob('../assets/photography/*', { eager: true, as: 'url' });
+
 const filteredImageList = () => {
   if (!collectionName || collectionName === 'Photo Feed') {
     return imageInfo.toReversed();
   }
   return imageInfo.filter((image) => image.collection === collectionName);
+}
+
+const resolveImageUrl = (src: string) => {
+  const key = `../assets/photography/${src}`;
+  const resolved = imageModules[key];
+  if (resolved) return resolved;
+  return `/src/assets/photography/${src}`;
 }
 ---
 <a class="back-link" href="/photography">
@@ -16,5 +26,5 @@ const filteredImageList = () => {
   <!-- <p>Photographs from my trip to France.</p> -->
 </div>
 {filteredImageList().map((img) => (
-  <img src={`/src/assets/photography/${img.src}`} />
+  <img src={resolveImageUrl(img.src)} alt={img.alt || img.title || img.src} loading="lazy" />
 ))}
