@@ -16,5 +16,5 @@ const filteredImageList = () => {
   <!-- <p>Photographs from my trip to France.</p> -->
 </div>
 {filteredImageList().map((img) => (
-  <img src={img.src} />
+  <img src={`/src/assets/photography/${img.src}`} />
 ))}
