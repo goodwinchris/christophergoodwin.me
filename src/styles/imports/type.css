@@ -22,8 +22,7 @@ a, button {
     }
   }
   
-  &:hover,
-  &.active {
+  &:hover {
     text-underline-offset: .333rem;
   }
 
@@ -56,7 +55,38 @@ a:has(h3) {
 
 *:focus-visible {
   outline-offset: 6px;
-  outline-color: #ee7d7d;
+  outline-color: var(--focus-color);
   outline-style: solid;
   outline-width: 4px;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.skip-link {
+  margin-inline-start: 1rem;
+  margin-block-start: 1rem;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: 1000;
+  background-color: var(--body-background);
+  color: var(--text-color);
+  padding: .5rem;
+  border-bottom-right-radius: .5rem;
+  transform: translateY(-100%);
+  transition: transform .3s cubic-bezier(0,0,.25,1);
+  opacity: 0;
+
+  &:focus,
+  &:focus-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.back-link {
+  position: absolute;
+  inset-block-end: 100%;
 }

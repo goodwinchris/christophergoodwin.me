@@ -1,32 +1,25 @@
 ---
-import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getEntry, render } from 'astro:content';
 
-export async function getStaticPaths() {
-  const posts = await getCollection('photography');
-  return posts.map(post => ({
-    params: { slug: post.id }, props: { post },
-  }));
+const slugParam = Astro.params.slug;
+const slug = Array.isArray(slugParam) ? slugParam.join('/') : slugParam;
+
+if (!slug) {
+  throw new Error('Missing slug');
 }
 
-const { post } = Astro.props;
+const post = await getEntry('photography', slug);
+
+if (!post) {
+  throw new Error(`No photography post found for slug: ${slug}`);
+}
+
 const { Content } = await render(post);
 ---
-
-<style>
-  h1 {
-    font-weight: 700;
-  }
-
-  .back-link {
-    position: absolute;
-    inset-block-end: 100%;
-  }
-</style>
-
 <BaseLayout frontmatter={post.data} pageTitle={post.data.title + ' | Photography | Christopher Goodwin'}>
   <a class="back-link" href="/photography">
-    <span>Back to All Posts</span>
+    <span>Back to Photography</span>
   </a>
   <div>
     <h1>{post.data.title}</h1>

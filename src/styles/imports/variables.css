@@ -1,11 +1,14 @@
 :root {
   --body-background: #f5f2f0;
   --text-color: #1C1522;
+  --text-color-alt: rgba(28, 21, 34, 0.8);
   --link-color: var(--text-color);
+  --focus-color: #ee7d7d;
 
   @media (prefers-color-scheme: dark) {
     --body-background: #16101C;
     --text-color: #ece8dc;
+    --text-color-alt: rgba(236, 232, 220, 0.8);
     --link-color: var(--text-color);
   }
 }

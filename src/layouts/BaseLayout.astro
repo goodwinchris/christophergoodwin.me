@@ -3,6 +3,8 @@ import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import { Font } from "astro:assets";
 
+const currentPath = Astro.url.pathname;
+
 const { pageTitle } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -36,10 +38,11 @@ const { pageTitle } = Astro.props;
     </script>
   </head>
   <body>
+    <a class="skip-link" href={`${currentPath}#mainContent`} data-astro-reload>Skip to main content</a>
     <div class="wrapper">
       <Navigation />
       <main>
-        <div class="main__content">
+        <div class="main__content" id="mainContent" tabindex="-1">
           <slot />
         </div>
       </main>

@@ -1,9 +1,13 @@
 ---
-import WorkPostList from "../../components/sections/WorkPostList.astro";
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPostLink from "../../components/BlogPostLink.astro";
 
 const pageTitle = 'Work | Christopher Goodwin';
+const allPosts = await getCollection("work");
+const allPrivatePosts = await getCollection("workPrivate");
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <WorkPostList />
+  <a href="/work/private/campbell">Campbell</a>
+  <a href="/work/zotec">Zotec</a>
 </BaseLayout>
