@@ -4,6 +4,14 @@ const { collectionName } = Astro.props;
 
 const imageModules = import.meta.glob('../assets/photography/*', { eager: true, as: 'url' });
 
+const imageMap = Object.fromEntries(
+  Object.entries(imageModules).map(([k, v]) => {
+    const parts = k.split('/');
+    const name = parts[parts.length - 1];
+    return [name, v];
+  })
+);
+
 const filteredImageList = () => {
   if (!collectionName || collectionName === 'Photo Feed') {
     return imageInfo.toReversed();
@@ -12,9 +20,15 @@ const filteredImageList = () => {
 }
 
 const resolveImageUrl = (src: string) => {
-  const key = `../assets/photography/${src}`;
-  const resolved = imageModules[key];
-  if (resolved) return resolved;
+  // Try exact basename match first
+  const resolvedByName = imageMap[src];
+  if (resolvedByName) return resolvedByName;
+
+  // Try matching any glob key that ends with the filename (robust across environments)
+  const matchEntry = Object.entries(imageModules).find(([k]) => k.endsWith(`/${src}`) || k.endsWith(src));
+  if (matchEntry) return matchEntry[1];
+
+  // Fallback (shouldn't be used in a proper build) — keep original path for dev
   return `/src/assets/photography/${src}`;
 }
 ---
