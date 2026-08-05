@@ -10,7 +10,6 @@ export default defineConfig({
     "/photography/3-2026-france": "/photography/france",
     "/photography/2-2026-joshua-tree": "/photography/joshua-tree",
     "/photography/1-2025-winter": "/photography/winter",
-    "/blog": "https://example.com/blog"
   },
   fonts: [{
       provider: fontProviders.local(),
