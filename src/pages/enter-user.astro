@@ -5,16 +5,16 @@ let error = false;
  
 if (Astro.request.method === 'POST') {
   const formData = await Astro.request.formData();
-  const password = formData.get('password')?.toString() ?? '';
+  const user = formData.get('userInput')?.toString() ?? '';
   const redirectTo = formData.get('redirect')?.toString() || '/private';
  
-  if (password === import.meta.env.SITE_PASSWORD) {
-    Astro.cookies.set('site-auth', password, {
+  if (user) {
+    Astro.cookies.set('logged-in-as', user, {
       httpOnly: true,
       secure: true,
       sameSite: 'lax',
       path: '/',
-      maxAge: 60 * 60 * 24 * 7, // cookie lasts 1 week
+      maxAge: 60 * 60 * 24 * 7 * 52, // cookie lasts 1 year
     });
     return Astro.redirect(redirectTo);
   } else {
@@ -33,7 +33,9 @@ const redirectParam = Astro.url.searchParams.get('redirect') || '/private';
   }
 
   label {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
   }
 
   .label-text {
@@ -43,11 +45,13 @@ const redirectParam = Astro.url.searchParams.get('redirect') || '/private';
   .input {
     order: 2;
     min-width: 50%;
-    padding: 0.5em 1em;
+    padding: 0.6em 1em 0.4em;
     border-radius: 6px;
     font-size: 1em;
+    border: none;
     border: 1px solid var(--text-color);
     background-color: var(--body-background);
+    font-family: var(--font-edmondsans);
     color: var(--text-color);
   }
 
@@ -82,20 +86,21 @@ const redirectParam = Astro.url.searchParams.get('redirect') || '/private';
   }
 </style>
 <BaseLayout pageTitle="Enter Password | Christopher Goodwin">
-  <a class="back-link" href="/work">
+  <a class="back-link" href="/photography">
     <span>Back to Work</span>
   </a>
-  <h1>This page is password protected</h1>
+  <h1>This page requires you to enter your name to see it</h1>
+  <p>This is purely for Chris to enjoy who is checking out his work</p>
   <form method="POST">
-    {error && <p class="error" aria-live="assertive">Incorrect password. Try again.</p>}
+    {error && <p class="error" aria-live="assertive">You can enter any name, I'd just prefer it to be who you actually are</p>}
     <input type="hidden" name="redirect" value={redirectParam} />
-    <label for="password">
-      <span class="label-text visually-hidden">Password</span>
+    <label for="userInput">
+      <span class="label-text">Your name</span>
       <input
         class="input"
-        type="password"
-        id="password"
-        name="passwordInput"
+        type="text"
+        id="userInput"
+        name="userInput"
         required
       />
     </label>
