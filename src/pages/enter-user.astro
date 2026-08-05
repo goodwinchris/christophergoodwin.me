@@ -6,7 +6,6 @@ let error = false;
 if (Astro.request.method === 'POST') {
   const formData = await Astro.request.formData();
   const user = formData.get('userInput')?.toString() ?? '';
-  const redirectTo = formData.get('redirect')?.toString() || '/private';
  
   if (user) {
     Astro.cookies.set('logged-in-as', user, {
@@ -16,13 +15,11 @@ if (Astro.request.method === 'POST') {
       path: '/',
       maxAge: 60 * 60 * 24 * 7 * 52, // cookie lasts 1 year
     });
-    return Astro.redirect(redirectTo);
+    return Astro.redirect('/photo-feed');
   } else {
     error = true;
   }
 }
- 
-const redirectParam = Astro.url.searchParams.get('redirect') || '/private';
 ---
 <style>
   form {
@@ -93,7 +90,6 @@ const redirectParam = Astro.url.searchParams.get('redirect') || '/private';
   <p>This is purely for Chris to enjoy who is checking out his work</p>
   <form method="POST">
     {error && <p class="error" aria-live="assertive">You can enter any name, I'd just prefer it to be who you actually are</p>}
-    <input type="hidden" name="redirect" value={redirectParam} />
     <label for="userInput">
       <span class="label-text">Your name</span>
       <input
