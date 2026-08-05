@@ -25,11 +25,10 @@ export const onRequest = defineMiddleware(async (context, next) => {
             'Content-Type': 'text/plain'
           },
           body: `${cookie} is viewing the photo feed`,
-        }).then(() => {
-          return next();
         })
       } catch (e) {
         console.warn('Ntfy fetch failed', e);
+      } finally {
         return next();
       }
     }
