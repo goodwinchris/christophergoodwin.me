@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhotoCollection from '../../components/PhotoCollection.astro';
+import type { ImageCollections } from '../../types/types';
+const collectionName: ImageCollections = 'France'
+const pageTitle = `${collectionName} | Photography | Christopher Goodwin`;
+---
+<BaseLayout pageTitle={pageTitle}>
+  <PhotoCollection collectionName={collectionName} />
+</BaseLayout>
