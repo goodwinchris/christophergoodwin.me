@@ -1,34 +1,42 @@
 ---
+import type { ImageMetadata } from 'astro';
 import imageInfo from '../assets/image-info.json';
-const imageFiles = import.meta.glob('/src/assets/photography/*.{jpg,jpeg,png,JPG,JPEG,PNG}', { eager: true });
+
+const imageFiles = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/photography/*.{jpg,jpeg,png,JPG,JPEG,PNG}',
+  { eager: true }
+);
 
 const { collectionName } = Astro.props;
 
 const filteredImages = () => {
-  if (!collectionName || collectionName === 'Photo Feed') {
-    return imageInfo.toReversed();
-  } else {
-    return imageInfo.filter((photo) => photo.collection === collectionName)
-  }
+  const images = !collectionName || collectionName === 'Photo Feed'
+    ? [...imageInfo].reverse()
+    : imageInfo.filter((photo) => photo.collection === collectionName);
+
+  return images.map((photo) => {
+    const filename = photo.src.split('/').pop();
+    const imagePath = `/src/assets/photography/${filename}`;
+    const image = imageFiles[imagePath];
+
+    if (!image) {
+      console.warn(`No matching asset found for ${imagePath}`);
+    }
+
+    return { ...photo, resolved: image?.default };
+  }).filter((photo): photo is typeof photo & { resolved: ImageMetadata } => Boolean(photo.resolved));
 };
-
-
 ---
 <a class="back-link" href="/photography">
   <span>Back to Photography</span>
 </a>
 <div>
   <h1>{collectionName}</h1>
-  <!-- <p>Photographs from my trip to France.</p> -->
 </div>
-<!-- {filteredImageList().map((img) => (
-  <img src={img.src} alt={img.alt ? img.alt : ''} />
-))} -->
-
 
 {filteredImages().map((photo) => {
     return (
-      <img src={photo.src} alt={photo.alt ? photo.alt : ''} />
+      <img src={photo.resolved.src} alt={photo.alt ? photo.alt : ''} />
     );
   }
 )}
