@@ -31,6 +31,6 @@ export const onRequest = defineMiddleware(async (context, next) => {
       }
       return next();
     }
-    return context.redirect(`/enter-user?redirect=${context.url.pathname}`);
+    return context.redirect(`/enter-user`);
   }
 });
