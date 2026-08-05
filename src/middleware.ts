@@ -18,18 +18,20 @@ export const onRequest = defineMiddleware(async (context, next) => {
     const cookie = context.cookies.get('logged-in-as')?.value;
     if(cookie) {
       try {
-        fetch('https://ntfy.sh/cg_website_photo-feed_logged-in-as', {
+        await fetch('https://ntfy.sh/cg_website_photo-feed_logged-in-as', {
           method: 'POST',
           mode: 'no-cors',
           headers: {
             'Content-Type': 'text/plain'
           },
           body: `${cookie} is viewing the photo feed`,
-        }) 
+        }).then(() => {
+          return next();
+        })
       } catch (e) {
         console.warn('Ntfy fetch failed', e);
+        return next();
       }
-      return next();
     }
     return context.redirect(`/enter-user`);
   }
