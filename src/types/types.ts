@@ -1,7 +1,8 @@
 export type ImageMetadata = {
   src: string;
   location?: string;
-  date?: Date;
+  releaseDate?: string;
+  captureDate?: string;
   alt?: string;
   collection?: ImageCollections;
 };

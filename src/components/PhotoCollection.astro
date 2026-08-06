@@ -8,7 +8,6 @@ const imageFiles = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 const { collectionName } = Astro.props;
-
 const filteredImages = () => {
   const images = !collectionName || collectionName === 'Photo Feed'
     ? [...imageInfo].reverse()
@@ -35,8 +34,22 @@ const filteredImages = () => {
 </div>
 
 {filteredImages().map((photo) => {
-    return (
-      <img src={photo.resolved.src} alt={photo.alt ? photo.alt : ''} />
-    );
+  let releaseDate = new Date();
+  const [year, month, day] = photo.releaseDate.split('-');
+  const todaysDate = new Date();
+
+  releaseDate.setDate(Number(day));
+  releaseDate.setFullYear(Number(year));
+  releaseDate.setMonth(Number(month) - 1);
+  releaseDate.setSeconds(releaseDate.getSeconds() - 1);
+
+
+  const isAfterToday = releaseDate > todaysDate;
+  console.log(releaseDate, todaysDate, isAfterToday);
+  if (!isAfterToday) {
+      return (
+        <img src={photo.resolved.src} alt={photo.alt ? photo.alt : ''} />
+      );
+    }
   }
 )}
